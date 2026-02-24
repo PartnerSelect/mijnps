@@ -1,23 +1,28 @@
 <template>
     <div class="bemiddelaar-welkom" v-if="matchmaker">
-        <div class="bemiddelaar-welkom__foto-container">
-            <img :src="matchmaker.Foto || ''" :alt="matchmaker.Voornaam" class="bemiddelaar-card__foto" />
-        </div>
-
         <div class="bemiddelaar-welkom__tekst">
             <p>
-                Welkom {{ user.Voornaam }},
+                <strong>Welkom {{ user.Voornaam }},</strong>
                 <br />
                 <br />
-                Mijn naam is {{ matchmaker.Voornaam }}. Ik ben jouw matchmaker. Je kunt me bereiken via
-                <a href="/nieuw-bericht" @click.prevent="$router.push('/nieuw-bericht')">een bericht</a> of je kunt een
-                <BelLink>belafspraak in mijn agenda maken</BelLink>. Ik ben je graag van dienst.
+                Dit is mijn.partnerselect.net. In het menu vind je alles rondom je matching, zoals voorstellen, je eigen
+                beschrijving, informatie en tips. Bij nieuws ontvang je een e-mail.
+                <br />
+                <br />
+                {{ matchmaker.Voornaam }} ondersteunt je tijdens je traject. Neem contact op via:
+                <br />
+                <br />
+                <strong>
+                    <a href="#" @click.prevent="$router.push('/nieuw-bericht')">Stuur bericht</a>
+                    {{ belafspraakLink && belafspraakLink !== null ? ' || ' : '' }}
+                    <a href="#" @click.prevent="maakBelafspraak" v-if="belafspraakLink">Maak belafspraak</a>
+                </strong>
             </p>
-            <p>
+            <!-- <p>
                 <br />
                 Heb je leuke foto's van jezelf?
                 <router-link to="/mijn-beschrijving/foto">Klik hier om ze naar ons te sturen!</router-link>
-            </p>
+            </p> -->
         </div>
     </div>
 </template>
@@ -30,7 +35,18 @@
             return {};
         },
         computed: {
-            ...mapGetters(['user', 'matchmaker', 'voorstellen']),
+            ...mapGetters(['user', 'matchmaker', 'voorstellen', 'belafspraakLink']),
+        },
+        methods: {
+            maakBelafspraak() {
+                if (this.belafspraakLink) {
+                    let link = document.createElement('a');
+                    link.href = this.belafspraakLink;
+                    link.target = '_blank';
+                    link.style.display = 'none';
+                    link.click();
+                }
+            },
         },
     };
 </script>

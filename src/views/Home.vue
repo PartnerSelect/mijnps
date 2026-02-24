@@ -2,8 +2,7 @@
     <div>
         <FullscreenLoader v-if="!user" />
         <template v-else>
-            <BemiddelaarCard v-if="voorstellen.length > 1" />
-            <BemiddelaarWelkom v-else />
+            <BemiddelaarWelkom />
 
             <h1 class="oleo">Overzicht</h1>
 
@@ -69,7 +68,7 @@
     import { mapGetters, mapActions } from 'vuex';
     // import ErrorMessage from '../components/ErrorMessage';
     import { errorToMessage } from '../functions/errorHandler';
-    import BemiddelaarCard from '../components/BemiddelaarCard';
+    // import BemiddelaarCard from '../components/BemiddelaarCard';
     import PBCard from '../components/PBCard';
     import BemiddelaarWelkom from '../components/BemiddelaarWelkom';
     import Card from '../components/Card.vue';
@@ -141,7 +140,7 @@
         },
         components: {
             // ErrorMessage,
-            BemiddelaarCard,
+            // BemiddelaarCard,
             PBCard,
             BemiddelaarWelkom,
             Card,

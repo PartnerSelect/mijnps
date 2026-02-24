@@ -1,0 +1,38 @@
+.vragenlijsten {
+    width: 100%;
+    padding: 1.5rem;
+    border: 3px solid $color-primary;
+    border-radius: 5px;
+    background-color: rgba($color-primary, 0.1);
+
+    &__item {
+        border: 1px solid $color-secondary;
+        padding: 0.6em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+
+        &--afgerond {
+            font-weight: bold;
+            color: $color-positive;
+            border: 2px solid $color-positive;
+            border-radius: 50%;
+            width: 1.6em;
+            height: 1.6em;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+
+            &::after {
+                content: '\2713';
+                display: block;
+                font-size: 1em;
+                margin: auto;
+            }
+        }
+    }
+}

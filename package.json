@@ -1,0 +1,33 @@
+{
+    "name": "mijnpartnerselect",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build --skip-plugins pwa,workbox",
+        "lint": "vue-cli-service lint",
+        "tunnel": "lt --subdomain baskalk --port 8080 --local-host localhost"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "core-js": "^3.6.5",
+        "register-service-worker": "^1.6.2",
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.3",
+        "vue2-dropzone": "^3.6.0",
+        "vue2-touch-events": "^2.2.1",
+        "vuex": "^3.0.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.5.15",
+        "@vue/cli-plugin-eslint": "^4.5.15",
+        "@vue/cli-plugin-pwa": "^4.5.15",
+        "@vue/cli-service": "^4.5.15",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "node-sass": "^4.14.1",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.10"
+    }
+}

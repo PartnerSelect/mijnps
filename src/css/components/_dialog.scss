@@ -1,0 +1,46 @@
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color-black, 0.8);
+}
+
+.dialog__content {
+    background: $color-white;
+    padding: 1rem 2rem;
+    min-width: 200px;
+    max-width: 600px;
+    white-space: pre-line;
+}
+
+.dialog__text {
+    margin-bottom: 2rem;
+}
+
+.dialog__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & > *:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+}
+
+.dialogFade-enter-active,
+.dialogFade-appear-active,
+.dialogFade-leave-active {
+    transition: opacity 0.15s ease-in-out;
+}
+
+.dialogFade-enter,
+.dialogFade-appear,
+.dialogFade-leave-to {
+    opacity: 0;
+}

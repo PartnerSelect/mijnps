@@ -1,0 +1,76 @@
+// UNORDERED LIST
+ul.mijnps-ul {
+    li {
+        list-style-type: none;
+        line-height: 1.4;
+
+        &::before {
+            content: '';
+            height: 0;
+            width: 0;
+            border: 6px solid transparent;
+            border-left: 6px solid $color-primary;
+            display: inline-block;
+        }
+    }
+}
+
+ul.mijnps-ul-alt {
+    li {
+        &::before {
+            content: '';
+            border-left: 6px solid rgba($color-black, 0.6);
+        }
+    }
+}
+
+// ORDERED LIST NUMBERS
+ol.mijnps-ol-nummers {
+    list-style: none;
+    counter-reset: ordered-list-number-counter;
+
+    li {
+        counter-increment: ordered-list-number-counter;
+    }
+
+    li::before {
+        content: counter(ordered-list-number-counter) '. ';
+        color: $color-primary;
+        font-weight: bold;
+    }
+}
+
+// ORDERED LIST LETTERS
+ol.mijnps-ol-letters {
+    list-style-type: none;
+    counter-reset: ordered-list-letter-counter;
+
+    li {
+        counter-increment: ordered-list-letter-counter;
+    }
+
+    li::before {
+        content: counter(ordered-list-letter-counter, lower-alpha) '. ';
+        color: $color-primary;
+        font-weight: bold;
+    }
+}
+
+.clickable {
+    & li {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $color-primary;
+            text-decoration-skip-ink: auto;
+        }
+    }
+}
+
+.reverse-icon {
+    & li::before {
+        transform: rotate(180deg);
+        margin-right: 0.6rem;
+    }
+}

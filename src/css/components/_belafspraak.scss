@@ -1,0 +1,67 @@
+.belafspraak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    border-radius: 505rem;
+    cursor: pointer;
+    background: $color-secondary;
+    box-shadow: 0 0 3px $color-black;
+    z-index: 10000;
+
+    @media only screen and (min-width: 1200px) {
+        right: calc(50% - 550px);
+    }
+
+    &__img {
+        object-fit: contain;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        padding: 1.4rem;
+        background: $color-accent;
+        z-index: 10;
+        transition: transform 0.3s ease-in-out;
+
+        @media only screen and (max-width: 600px) {
+            height: 6rem;
+            width: 6rem;
+        }
+    }
+
+    &:hover &__img {
+        transform: rotate(-360deg);
+        // animation: turn-phone 0.3s ease-in-out forwards;
+    }
+
+    &__tekst {
+        height: 100%;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: width 0.3s ease-in-out;
+        font-weight: bold;
+        color: $color-white;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    &:hover &__tekst {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+}
+
+// @keyframes turn-phone {
+//     from {
+//         transform: rotate(0deg);
+//     }
+
+//     to {
+//         transform: rotate(-360deg);
+//     }
+// }

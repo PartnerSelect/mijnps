@@ -1,0 +1,28 @@
+#fotoDropzone {
+  background: rgba(#59c0c1, 0.4);
+  width: 100%;
+  min-height: 40vh;
+  margin-bottom: 1rem;
+  border: 2px dotted #f50;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dz-success-mark svg g {
+  fill: $color-positive;
+  fill-opacity: 0.8;
+}
+.dz-error-mark svg g {
+  fill: $color-negative;
+  fill-opacity: 0.8;
+}
+
+.dz-progress {
+  border: 1px solid $color-black;
+}
+
+.dz-upload {
+  background: $color-accent;
+}

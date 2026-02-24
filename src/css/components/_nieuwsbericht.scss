@@ -1,0 +1,112 @@
+.nieuwsbericht {
+    margin: 0;
+    padding: 0;
+}
+
+.nieuwsbericht__bericht {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: 1px solid $color-black;
+    padding: 1rem 1.6rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    background: rgba($color-secondary, 0.4);
+
+    & a,
+    & a:link,
+    & a:active,
+    & a:visited,
+    & a:hover {
+        color: $color-black;
+        text-decoration: underline;
+    }
+
+    & a:focus {
+        outline: 1px dotted;
+        outline-offset: 2px;
+        outline-color: $color-primary;
+    }
+
+    & a:hover {
+        text-decoration-color: $color-primary;
+        color: #000;
+        text-decoration-skip-ink: auto;
+    }
+
+    img {
+        float: left;
+        margin: 0 15px 5px 0;
+
+        &.banner {
+            float: unset;
+            display: block;
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            margin: 0 0 10px 0;
+        }
+
+        &.breed {
+            float: unset;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.nieuwsbericht__sluiten {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    min-width: 40px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.nieuwsbericht__content-container {
+    display: block;
+    flex-grow: 1;
+}
+
+.nieuwsbericht__header {
+    font-family: $font-oleo;
+}
+
+.nieuwsbericht__content {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.nieuwsbericht__activiteit {
+    background: rgba($color-primary, 0.4);
+}
+
+.nieuwsbericht__urgent {
+    background: rgba($color-negative, 0.4);
+}
+
+.nieuwsbericht-enter-active {
+    transition: all 0.4s linear;
+}
+
+.nieuwsbericht-leave-active {
+    transition: all 0.4s ease-in-out;
+}
+
+.nieuwsbericht-enter {
+    opacity: 0;
+    margin-top: -0.5rem;
+}
+
+.nieuwsbericht-leave-to {
+    opacity: 0;
+    margin-top: -1rem;
+}

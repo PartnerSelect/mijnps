@@ -1,0 +1,37 @@
+.notification__container {
+    z-index: 10000;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 500px;
+}
+
+.notification {
+    display: block;
+    width: 100%;
+    background: rgba($color-black, 0.9);
+    color: $color-white;
+    border-radius: 3px;
+    padding: 2rem;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.notification-list-enter-active,
+.notification-list-leave-active {
+    transition: margin 0.15s ease-in-out, opacity 0.15s linear;
+}
+
+.notification-list-enter {
+    margin-bottom: -2rem;
+    opacity: 0;
+}
+
+.notification-list-leave-to {
+    margin-top: -2rem;
+    opacity: 0;
+}

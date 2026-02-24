@@ -1,0 +1,54 @@
+.mijnps-pb {
+    position: relative;
+}
+
+.mijnps-pb__foto {
+    position: relative;
+    width: 50%;
+    max-width: 250px;
+    min-height: 180px;
+    background: $color-lightgrey;
+    height: auto;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    cursor: pointer;
+    border: 1px solid rgba($color-primary, 0.6);
+    transition: all 0.2s ease-in-out;
+
+    @media only screen and (max-width: 400px) {
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem;
+        max-width: unset;
+    }
+}
+
+.mijnps-pb__foto--groot {
+    width: 100%;
+    max-width: unset;
+}
+
+.mijnps-pb__tekst {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.functie-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > * {
+        margin-right: 1rem;
+    }
+}
+
+.fototeller {
+  position: absolute;
+  font-size: 1.3rem;
+  bottom: 0;
+  left: 0;
+  padding: 0.3rem 0.5rem;
+  background: rgba(black, 0.5);
+  color: white;
+}

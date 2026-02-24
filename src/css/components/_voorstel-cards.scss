@@ -1,0 +1,60 @@
+.voorstel-cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 600px) {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--home .card {
+        margin: 1rem 0;
+        margin-right: 2.5rem;
+    }
+}
+
+.card {
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    height: 40rem;
+    width: 28rem;
+    box-shadow: 0 0 5px $color-black;
+    position: relative;
+
+    &__foto {
+        height: 50%;
+        min-height: 20rem;
+        background: $color-lightgrey;
+        width: 100%;
+        object-fit: cover;
+        display: flex block;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__content {
+        padding: 0.8rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 50%;
+    }
+
+    &__naam {
+        font-size: 2.5rem;
+    }
+
+    &__datum {
+        color: lighten($color-black, 25%);
+    }
+
+    &__btn {
+        align-self: center;
+        margin-top: auto;
+    }
+}

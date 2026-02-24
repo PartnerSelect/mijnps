@@ -1,0 +1,68 @@
+.header-bar {
+    width: 100%;
+    // max-width: 800px;
+    background: $color-primary;
+    padding: 1rem 1.5rem;
+    color: $color-white;
+    font-family: $font-oleo;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+    &--m0 {
+        margin: 0;
+    }
+}
+
+.mijnps-table {
+    width: 100%;
+    // max-width: 800px;
+    border-collapse: collapse;
+    margin-bottom: 4rem;
+
+    & th {
+        font-size: 1.4rem;
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    & td {
+        padding: 0.5rem;
+        border: none;
+    }
+
+    & tr:nth-child(even) {
+        background: #dedede;
+    }
+}
+
+.table-clickable {
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: $color-primary;
+    }
+
+    @supports (hover: none) {
+        text-decoration: underline;
+        text-decoration-color: $color-primary;
+    }
+}
+
+// PAGINATION voor berichten e.d.
+.pagination {
+    font-family: $font-open-sans;
+    font-weight: bold;
+    font-size: 1.6rem;
+
+    & span {
+        &.clickable {
+            cursor: pointer;
+            padding: 0 1.5rem;
+        }
+    }
+}

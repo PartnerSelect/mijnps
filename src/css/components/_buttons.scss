@@ -1,0 +1,59 @@
+.btn {
+    border: 1px solid transparent;
+    padding: 1rem 1.6rem;
+    margin: 1rem 0;
+    background: $color-primary;
+    background: linear-gradient(to left, $color-primary 50%, darken($color-primary, 10%) 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: all 0.1s ease-in-out;
+    color: $color-white;
+    cursor: pointer;
+    display: block;
+
+    &:focus {
+        outline: 1px solid $color-primary;
+        outline-offset: 2px;
+    }
+
+    &:hover {
+        background-position: left;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+    &:disabled {
+        background: #ccc;
+        color: $color-black;
+        cursor: auto;
+        font-weight: normal;
+
+        &:active {
+            transform: none;
+        }
+    }
+}
+
+.btn-rounded {
+    border-radius: 500rem;
+}
+
+.btn-negative {
+    background: $color-white;
+    background-image: linear-gradient(to right, rgba($color-primary, 0.85) 50%, $color-white 50%);
+    background-position: right;
+    background-size: 210%;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    font-weight: bold;
+
+    &:hover,
+    &:active {
+        color: white;
+    }
+    &:disabled {
+        color: $color-black;
+        border: none;
+    }
+}

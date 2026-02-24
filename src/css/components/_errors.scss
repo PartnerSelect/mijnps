@@ -1,0 +1,67 @@
+.errorMessage {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 3rem;
+    background: rgba($color-negative, 0.5);
+    border: 1px solid $color-negative;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba($color-negative, 0.6);
+    position: relative;
+    line-height: 1.4;
+
+    @media only screen and (max-width: 400px) {
+        width: 100%;
+    }
+}
+
+.errorMessage__close {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    color: $color-black;
+    border-color: $color-black;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    padding: 0;
+    background: linear-gradient(to right, $color-secondary 50%, $color-white 50%);
+    background-size: 200%;
+    background-position: right;
+}
+
+.errorAnim-enter-active {
+    animation: errorEnter 0.4s linear;
+}
+
+.errorAnim-leave-active {
+    transition: opacity 0.3s linear;
+}
+
+.errorAnim-leave-to {
+    opacity: 0;
+}
+
+@keyframes errorEnter {
+    0% {
+        transform: translateX(-2rem);
+    }
+
+    20% {
+        transform: translateX(2rem);
+    }
+    40% {
+        transform: translateX(-2rem);
+    }
+
+    60% {
+        transform: translateX(2rem);
+    }
+
+    80% {
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -14,7 +14,7 @@
                 <br />
                 <strong>
                     <a href="#" @click.prevent="$router.push('/nieuw-bericht')">Stuur bericht</a>
-                    {{ belafspraakLink && belafspraakLink !== null ? ' || ' : '' }}
+                    {{ belafspraakLink && belafspraakLink !== null ? ' | ' : '' }}
                     <a href="#" @click.prevent="maakBelafspraak" v-if="belafspraakLink">Maak belafspraak</a>
                 </strong>
             </p>

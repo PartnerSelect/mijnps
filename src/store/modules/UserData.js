@@ -100,7 +100,7 @@ const getters = {
             afspraakId = '145951000000125136'
         }
 
-        if (state.user.Matchmaker.BookingId && state.user.Matchmaker.BookingId != 145951000000017010) {
+        if (state.user.Matchmaker.BookingId && state.user.Matchmaker.BookingId !== '145951000000017010') {
             return `https://afspraak.partnerselect.net/#/customer/${afspraakId}?staffId=${state.user.Matchmaker.BookingId}&Naam=${state.user.Naam}&E-mail=${state.user.Email}&Telefoonnummer=${state.user.Telefoonnummer}`;
         }
         return `https://afspraak.partnerselect.net/#/customer/${afspraakId}?Naam=${state.user.Naam}&E-mail=${state.user.Email}&Telefoonnummer=${state.user.Telefoonnummer}`;

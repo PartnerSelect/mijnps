@@ -12,16 +12,22 @@
                 <label for="wachtwoord">
                     <div class="ww-div">
                         <span>Wachtwoord:</span>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            v-model="password"
-                            autocomplete="current-password"
-                            ref="wwField"
-                            @keydown.enter="handleLoginClick"
-                        />
-                        <i class="show-pw-button" @click="showPasswordAsText"></i>
+                        <div class="ww-input-wrap">
+                            <input
+                                :type="showPassword ? 'text' : 'password'"
+                                name="password"
+                                id="password"
+                                v-model="password"
+                                autocomplete="current-password"
+                                @keydown.enter="handleLoginClick"
+                            />
+                            <button
+                                type="button"
+                                class="show-pw-button"
+                                :aria-label="showPassword ? 'Verberg wachtwoord' : 'Toon wachtwoord'"
+                                @click="togglePasswordVisibility"
+                            ></button>
+                        </div>
                     </div>
                 </label>
             </form>
@@ -78,6 +84,7 @@
                 email: null,
                 password: null,
                 onthoudMe: false,
+                showPassword: false,
                 showHelp: false,
                 showNoMember: false,
                 LogoBVSK,
@@ -114,10 +121,8 @@
             doNothing() {
                 return;
             },
-            showPasswordAsText() {
-                return this.$refs.wwField.type === 'password'
-                    ? (this.$refs.wwField.type = 'text')
-                    : (this.$refs.wwField.type = 'password');
+            togglePasswordVisibility() {
+                this.showPassword = !this.showPassword;
             },
             toggleExtraInfo(type) {
                 if (type === 'help') {
@@ -140,19 +145,26 @@
         line-height: 1.2;
     }
 
-    .ww-div {
+    .ww-input-wrap {
         position: relative;
     }
 
+    .ww-input-wrap input {
+        padding-right: 2.25rem;
+    }
+
     .show-pw-button {
+        background: transparent;
+        border: 0;
         position: absolute;
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 2rem;
         top: 50%;
-        right: 0;
-        margin-left: auto;
+        right: 0.25rem;
         cursor: pointer;
-        padding: 0 12px;
+        padding: 0;
+        line-height: 1;
+        transform: translateY(-50%);
     }
 
     .show-pw-button::after {

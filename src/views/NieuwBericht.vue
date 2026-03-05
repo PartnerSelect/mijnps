@@ -23,8 +23,8 @@
                     Bericht aan matchmaker {{ matchmaker.Voornaam ? `(${matchmaker.Voornaam})` : '' }}
                 </option>
                 <option value="Stuur foto">Stuur een foto</option>
-                <option value="Suggestie / Verbetertip">Suggestie / Verbetertip</option>
-                <option value="Klacht">Klacht</option>
+                <option value="Suggestie / Verbetertip">Verbetertip</option>
+                <option value="Klacht">Suggestie / Klacht</option>
                 <option value="Administratieve vraag">Administratieve vraag</option>
                 <option value="Succesverhaal">Succesverhaal</option>
                 <option value="Uitschrijving">Uitschrijving</option>

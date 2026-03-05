@@ -35,9 +35,6 @@
         <h2 class="oleo">Administratie</h2>
         <ul class="mijnps-ul">
             <li class="table-clickable" @click="scrollToItem('rekeningnummer')">Wat is jullie bankrekeningnummer?</li>
-            <li class="table-clickable" @click="scrollToItem('betalingen-stoppen')">
-                Hoe kan ik mijn betalingen stoppen?
-            </li>
         </ul>
         <h2 class="oleo">Overig</h2>
         <ul class="mijnps-ul">
@@ -96,15 +93,10 @@
         <a href="#" @click.prevent="scrollToTop">Naar boven</a>
 
         <h3 class="oleo-black" id="wat-als-contact">
-            Hoe zit het met de bemiddeling als ik iemand beter wil leren kennen?
+            Blijven jullie zoeken als er al contact is gelegd?
         </h3>
         <p>
-            Wanneer je een voorstel hebt gekregen en na een geslaagde eerste ontmoeting elkaar beter wilt leren kennen,
-            kunnen jullie de bemiddeling tijdelijk stopzetten. De betaling loopt dan wel door. Wil je dat ook de
-            betaling stopt, overweeg dan om jezelf uit te schrijven. Dit is met een kalendermaand opzegtermijn mogelijk.
-            Meld je in bijvoorbeeld oktober dat je verder wilt met je date en de betaling wilt stoppen, dan betaal je
-            alleen de maand oktober en november nog. Stopt jullie contact na enige tijd en wil je nieuwe matches
-            ontvangen, dan start op dat moment de betaling opnieuw.
+           Nee, we willen dat ieder contact een eerlijke kans krijgt. Zolang je met iemand in contact staat, sturen we geen nieuwe voorstellen.
         </p>
         <a href="#" @click.prevent="scrollToTop">Naar boven</a>
 
@@ -133,14 +125,6 @@
         <p>
             Geef bij een betaling altijd het factuurnummer door als betalingskenmerk en voldoe bij grote voorkeur de
             factuur met de Ideal link die in de e-mail staat.
-        </p>
-        <a href="#" @click.prevent="scrollToTop">Naar boven</a>
-
-        <h3 class="oleo-black" id="betalingen-stoppen">Hoe kan ik mijn betalingen stoppen?</h3>
-        <p>
-            Je staat met een kalendermaand opzegtermijn ingeschreven. Wanneer je je in bijvoorbeeld april uitschrijft,
-            dan betaal je alleen de maand april en mei nog. Daarna stoppen de betalingen. Wil je je uitschrijven? Stuur
-            dan een bericht en wij zullen de uitschrijving binnen enkele werkdagen bevestigen.
         </p>
         <a href="#" @click.prevent="scrollToTop">Naar boven</a>
 

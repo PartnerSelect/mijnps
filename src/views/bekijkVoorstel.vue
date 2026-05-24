@@ -12,7 +12,7 @@
                 Contact afmelden
             </button>
             <template>
-                <div class="mijnps-pb__foto" v-if="voorstel.Foto_zichtbaarheid == 'Wel zien'">
+                <div class="mijnps-pb__foto" v-if="voorstel.Foto_zichtbaarheid == 'Wel zien' || voorstel.Foto_zichtbaarheid == 'Geen foto'">
                     <img
                         :src="profielfotoKandidaat"
                         alt="Profielfoto niet gevonden"

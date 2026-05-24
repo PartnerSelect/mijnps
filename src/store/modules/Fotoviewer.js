@@ -29,10 +29,12 @@ const actions = {
             });
         }
 
-        commit('SET_FOTOLIJST', {
-            fotoLijst: arr,
-            userId: user.Id,
-        });
+        if (arr.length > 0) {
+            commit('SET_FOTOLIJST', {
+                fotoLijst: arr,
+                userId: user.Id,
+            });
+        }
     },
     clearFotos({ commit }) {
         commit('CLEAR_FOTOLIJST');

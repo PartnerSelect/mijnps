@@ -2,7 +2,7 @@
     <div class="card">
         <template>
             <img
-                v-if="fotocode == 'Wel zien'"
+                v-if="fotocode == 'Wel zien' || fotocode == 'Geen foto'"
                 :src="pbfoto"
                 alt="Profielfoto niet gevonden"
                 class="card__foto"
@@ -52,7 +52,7 @@
             ...mapGetters(['kandidaat', 'matchmaker', 'user']),
             pbfoto() {
                 const persoon = this.kandidaat(this.persoonId);
-                const fileId = persoon?.Profielfoto?.[0].File_Id || null;
+                const fileId = persoon?.Profielfoto?.[0]?.File_Id || null;
                 if (fileId) {
                     return `${this.$baseUrl}/foto/${this.persoonId}/${fileId}`;
                 } else {
